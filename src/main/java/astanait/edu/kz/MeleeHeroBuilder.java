@@ -14,7 +14,6 @@ public class MeleeHeroBuilder extends AbstractHeroBuilder {
         if(hp < 1000){
             throw new IllegalStateException("Melee Hero can't have less than 1000 hp!");
         }
-
     }
 
 }
