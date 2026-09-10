@@ -6,8 +6,8 @@ public final class Hero {
     private final double mana;
     private final int damage;
     private final int agility;
-    private final String weaponType;
-    private final String attackRange;
+    private final AbstractHeroBuilder.WeaponType weaponType;
+    private final AbstractHeroBuilder.AttackRange attackRange;
     private final boolean canHeal;
 
     //constructor
@@ -45,11 +45,11 @@ public final class Hero {
         return agility;
     }
 
-    public String getWeaponType() {
+    public AbstractHeroBuilder.WeaponType getWeaponType() {
         return weaponType;
     }
 
-    public String getAttackRange() {
+    public AbstractHeroBuilder.AttackRange getAttackRange() {
         return attackRange;
     }
 

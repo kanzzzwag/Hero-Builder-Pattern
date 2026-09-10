@@ -2,14 +2,17 @@ package astanait.edu.kz;
 
 abstract class AbstractHeroBuilder implements HeroBuilder {
 
+    enum WeaponType {MELEE, RANGED};
+    enum AttackRange {CLOSE, MID, FAR};
+
     protected String name;
     protected double hp;
     protected double mana;
     protected int damage;
     protected int agility;
-    protected String weaponType;
-    protected String attackRange;
     protected boolean canHeal;
+    protected WeaponType weaponType;
+    protected AttackRange attackRange;
 
     //setters
 

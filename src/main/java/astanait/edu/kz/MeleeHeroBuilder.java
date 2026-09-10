@@ -4,8 +4,8 @@ public class MeleeHeroBuilder extends AbstractHeroBuilder {
 
     public MeleeHeroBuilder(){
         this.canHeal = false;
-        this.attackRange = "Close";
-        this.weaponType = "Melee";
+        this.attackRange = AttackRange.CLOSE;
+        this.weaponType = WeaponType.MELEE;
     }
 
     @Override
