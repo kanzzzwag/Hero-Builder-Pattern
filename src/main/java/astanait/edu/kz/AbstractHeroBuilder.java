@@ -1,4 +1,54 @@
 package astanait.edu.kz;
 
-public class AbstractHeroBuilder {
+abstract class AbstractHeroBuilder implements HeroBuilder {
+
+    protected String name;
+    protected double hp;
+    protected double mana;
+    protected int damage;
+    protected int agility;
+    protected String weaponType;
+    protected String attackRange;
+    protected boolean canHeal;
+
+    @Override
+    public HeroBuilder setName(String name) {
+        this.name = name;
+        return this;
+    }
+
+    @Override
+    public HeroBuilder setHp(double hp) {
+        this.hp = hp;
+        return this;
+    }
+
+    @Override
+    public HeroBuilder setMana(double mana) {
+        this.mana = mana;
+        return this;
+    }
+
+    @Override
+    public HeroBuilder setDamage(int damage) {
+        this.damage = damage;
+        return this;
+    }
+
+    @Override
+    public HeroBuilder setAgility(int agility) {
+        this.agility = agility;
+        return this;
+    }
+
+    @Override
+    public HeroBuilder setCanHeal(boolean canHeal) {
+        this.canHeal = canHeal;
+        return this;
+    }
+
+    @Override
+    public final Hero build() {
+        return new Hero(this);
+    }
 }

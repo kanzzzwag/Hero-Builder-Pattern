@@ -1,6 +1,6 @@
 package astanait.edu.kz;
 
-public class Hero {
+public final class Hero {
     private final String name;
     private final double hp;
     private final double mana;
@@ -12,15 +12,15 @@ public class Hero {
 
     //constructor
 
-    public Hero(String name, double hp, double mana, int damage, int agility, String weaponType, String attackRange, boolean canHeal) {
-        this.name = name;
-        this.hp = hp;
-        this.mana = mana;
-        this.damage = damage;
-        this.agility = agility;
-        this.weaponType = weaponType;
-        this.attackRange = attackRange;
-        this.canHeal = canHeal;
+    Hero(AbstractHeroBuilder builder) {
+        this.name = builder.name;
+        this.hp = builder.hp;
+        this.mana = builder.mana;
+        this.damage = builder.damage;
+        this.agility = builder.agility;
+        this.weaponType = builder.weaponType;
+        this.attackRange = builder.attackRange;
+        this.canHeal = builder.canHeal;
     }
 
     //getters
