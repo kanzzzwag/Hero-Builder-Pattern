@@ -54,8 +54,7 @@ abstract class AbstractHeroBuilder implements HeroBuilder {
         return new Hero(this);
     }
 
-    //validation
-
+    //validations
     protected void validate(){
         if(name == null || name.isBlank()){
             throw new IllegalStateException("The hero's name must exist!");
