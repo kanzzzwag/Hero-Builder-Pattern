@@ -11,6 +11,8 @@ abstract class AbstractHeroBuilder implements HeroBuilder {
     protected String attackRange;
     protected boolean canHeal;
 
+    //setters
+
     @Override
     public HeroBuilder setName(String name) {
         this.name = name;
@@ -51,4 +53,16 @@ abstract class AbstractHeroBuilder implements HeroBuilder {
     public final Hero build() {
         return new Hero(this);
     }
+
+    //validation
+
+    protected void validate(){
+        if(name == null || name.isBlank()){
+            throw new IllegalStateException("The hero's name must exist!");
+        }
+        if(hp <= 0){
+           throw new IllegalStateException("The hero's hp must be greater than 0!");
+        }
+    }
+
 }
