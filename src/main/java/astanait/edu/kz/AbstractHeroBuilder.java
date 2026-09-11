@@ -54,6 +54,7 @@ abstract class AbstractHeroBuilder implements HeroBuilder {
 
     @Override
     public final Hero build() {
+        validate();
         return new Hero(this);
     }
 
